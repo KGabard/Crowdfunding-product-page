@@ -1,0 +1,23 @@
+.pledge-input {
+    @include button(calc($button-width * 0.6), calc($button-height * 0.9));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: $section-border;
+    border-color: $color-secondary;
+    & p {
+        @include typographies(subtitle);
+        padding-right: 5px;
+    }
+    &__value {
+        width: $button-width * 0.6 * 0.5;
+        height: fit-content;
+        background-color: transparent;
+        border: none;
+        @include typographies(selection-card-title);
+        &:focus {
+            outline: none;
+        }
+    }
+}

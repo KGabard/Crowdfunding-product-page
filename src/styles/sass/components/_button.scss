@@ -1,0 +1,92 @@
+$button-height: 60px;
+$button-width: 200px;
+
+.button {
+    @include button;
+    @include typographies(button);
+    position: relative;
+    &:hover {
+        color: $neutral-color-primary;
+        background-color: $color-primary;
+    }
+    &--bookmark {
+        position: relative;
+        color: $neutral-color-tertiary;
+        background-color: $neutral-color-secondary;
+        @include mobile-only {
+            width: 0;
+            height: 0;
+            align-self: center;
+        };
+        & img {
+            width: $button-height;
+            height: $button-height;
+            position: absolute;
+            z-index: 10;
+            left: 0;
+            transform: translateX(0%) rotate(0deg);
+            transition: left 0.4s ease-out, transform 0.4s ease-out;
+        }
+        & p {
+            transform: translateX(20px);
+            transition: transform 0.4s ease-out;
+            @include mobile-only {
+                visibility: collapse;
+            };
+        }
+    }
+    &--bookmarked {
+        color: $color-primary;
+        background-color: $neutral-color-secondary;
+        @include mobile-only {
+            width: 0;
+            height: 0;
+            align-self: center;
+        };
+        & img {
+            width: $button-height;
+            height: $button-height;
+            position: absolute;
+            z-index: 10;
+            left: 100%;
+            transform: translateX(-100%) rotate(360deg);
+            transition: left 0.4s ease-out, transform 0.4s ease-out;
+        }
+        & p {
+            transform: translateX(-20px);
+            transition: transform 0.4s ease-out;
+            @include mobile-only {
+                visibility: collapse;
+            };
+        }
+    }
+    &--disabled {
+        color: $neutral-color-tertiary;
+        background-color: $neutral-color-secondary;
+        cursor: default;
+        &:hover {
+            color: $neutral-color-tertiary;
+            background-color: $neutral-color-secondary;
+        }
+    }
+    &--small {
+        width: calc($button-width * 0.9);
+        height: calc($button-height * 0.9);
+        @include mobile-only {
+            width: calc($button-width * 0.84);
+            height: calc($button-height * 0.84);
+        }
+        @include mobile-only-375 {
+            width: calc($button-width * 0.80);
+            height: calc($button-height * 0.80);
+        }
+        @include mobile-only-320 {
+            width: calc($button-width * 0.75);
+            height: calc($button-height * 0.75);
+        }
+    }
+    &--smaller {
+        width: calc($button-width * 0.6);
+        height: calc($button-height * 0.9);
+    }
+}

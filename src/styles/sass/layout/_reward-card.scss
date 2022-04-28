@@ -1,0 +1,62 @@
+.reward-card{
+    @include reward-card;
+    &--disabled {
+        opacity: 0.5;
+    }
+    &__title {
+        @include typographies(title);
+        @include tablet-only {
+            grid-column: 1 / span 2;
+        }
+    }
+    &__subtitle {
+        justify-self: end;
+        @include typographies(subtitle);
+        color: $color-secondary;
+        @include mobile-only {
+            position: relative;
+            top: -10px;
+        }
+        @include tablet-only {
+            grid-column: 1 / span 2;
+            justify-self: start;
+        }
+    }
+    &__text {
+        grid-column: 1 / span 2;
+        @include typographies(subtitle);
+        text-align: justify;
+        @include tablet-only {
+            padding: 25px 0;
+        }
+    }
+    &__rewards-left {
+        align-self: end;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        @include mobile-only {
+            align-self: start;
+        }
+        @include tablet-only {
+            align-self: center;
+        }
+        & .value {
+            @include typographies(header);
+        }
+        & .tag {
+            @include typographies(subtitle);
+        }
+    }
+    & .button {
+        justify-self: end;
+        align-self: end;
+        @include mobile-only {
+            align-self: start;
+        }
+        @include tablet-only {
+            width: calc($button-width * 0.75);
+            height: calc($button-height * 0.75);
+        }
+    }
+}

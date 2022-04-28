@@ -1,0 +1,40 @@
+.data-display {
+    height: 4.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 10px;
+    border-left: 2px solid darken($neutral-color-secondary,10%);
+    padding-left: 50px;
+    @include mobile-only {
+        width: 100px;
+        height: 75px;
+        padding-left: 0;
+        border-left: none;
+        border-top: 2px solid darken($neutral-color-secondary,10%);
+        align-items: center;
+        margin-bottom: 20px;
+        position: relative;
+        top: -15px
+    }
+    @include tablet-only {
+        padding-left: 10%;
+        height: fit-content;
+    }
+    &--first {
+        border-left: none;
+        padding-left: 0;
+        @include mobile-only {
+            border-top: none;
+        }
+    }
+    &__data {
+        @include typographies(header);
+    }
+    &__subtitle {
+        @include typographies(subtitle);
+        @include mobile-only {
+            white-space: nowrap;
+        }
+    }
+}

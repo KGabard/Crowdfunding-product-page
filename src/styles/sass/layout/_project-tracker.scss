@@ -1,0 +1,30 @@
+.project-tracker {
+    @include project-section(225px);
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include mobile-only {
+        height: fit-content;
+    }
+    &__datas {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        @include mobile-only {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        @include tablet-only {
+            align-items: center;
+        }
+    }
+    &__progression-bar {
+        position: relative;
+        @include progression-bar;
+        &__completion {
+            position: absolute;
+            @include progression-bar(90%, $color-secondary);
+        }
+    }
+}

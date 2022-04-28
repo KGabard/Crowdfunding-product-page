@@ -1,0 +1,47 @@
+@import url(https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap);
+
+$typographies: (
+    logo: (
+        font-family: ('Commissioner', sans-serif),
+        color: $neutral-color-primary,
+        font-size: 1.7em,
+        font-weight: 700,
+        text-transform: lowercase
+    ),
+    nav: (
+        font-family: ('Commissioner', sans-serif),
+        color: $neutral-color-primary,
+        font-size: 1.1em,
+        font-weight: 400
+    ),
+    header: (
+        font-family: ('Commissioner', sans-serif),
+        color: $neutral-color-quaternary,
+        font-size: 1.8em,
+        font-weight: 700
+    ),
+    title: (
+        font-family: ('Commissioner', sans-serif),
+        color: $neutral-color-quaternary,
+        font-size: 1.55em,
+        font-weight: 700
+    ),
+    subtitle: (
+        font-family: ('Commissioner', sans-serif),
+        color: $neutral-color-tertiary,
+        font-size: 1.1em,
+        font-weight: 500
+    ),
+    button: (
+        font-family: ('Commissioner', sans-serif),
+        color: $neutral-color-primary,
+        font-size: 1em,
+        font-weight: 700
+    ),
+    selection-card-title: (
+        font-family: ('Commissioner', sans-serif),
+        color: $neutral-color-quaternary,
+        font-size: 1.25em,
+        font-weight: 700
+    )
+);

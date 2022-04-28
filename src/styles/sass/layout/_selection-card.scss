@@ -1,0 +1,122 @@
+.selection-card {
+    @include selection-card;
+    &__grid {
+        height: 200px;
+        width: auto;
+        padding: $selection-card-padding;
+        display: grid;
+        grid-template-columns: 50px auto 1fr auto;
+        grid-template-rows: 40px 1fr;
+        align-items: center;
+        @include tablet-and-mobile {
+            height: fit-content;
+            padding: $mobile-selection-card-padding;
+            grid-template-columns: 35px 1fr;
+            grid-template-rows: auto auto 1fr auto;
+        }
+    }
+    & .radio-btn {
+        @include tablet-and-mobile {
+            grid-row: 1 / span 2;
+        }
+    }
+    &__title {
+        @include typographies(selection-card-title);
+        color: $neutral-color-quaternary;
+    }
+    &__subtitle {
+        @include typographies(selection-card-title);
+        color: $color-secondary;
+        margin-left: 20px;
+        @include tablet-and-mobile {
+            margin-left: 0;
+        }
+    }
+    &__text {
+        @include typographies(subtitle);
+        grid-column: 2 /span 3;
+        text-align: justify;
+        @include tablet-and-mobile {
+            grid-column: 1 /span 2;
+            grid-row: 3;
+            padding: 20px 0;
+        }
+    }
+    &__rewards-left {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        & .value {
+            @include typographies(header);
+        }
+        & .tag {
+            @include typographies(subtitle);
+        }
+    }
+    &:hover {
+        border-color: $color-secondary;
+        & .selection-card__title {
+            color: $color-secondary;
+        }
+        & .radio-btn {
+            border-color: $color-secondary;
+        }
+    }
+    &.active {
+        grid-template-rows: 40px 1fr auto;
+        border-color: $color-secondary;
+        & .selection-card__title {
+            color: $neutral-color-quaternary;
+        }
+        & .radio-btn {
+            border-color: $color-secondary;
+            &__check {
+                background-color: $color-secondary;
+            }
+        }
+    }
+    &.disabled {
+        opacity: 0.5;
+    }
+}
+
+.pledge-container {
+    height: 100px;
+    padding: $selection-card-padding;
+    display: flex;
+    grid-column: 1 /span 4;
+    align-items: center;
+    border-top: $section-border;
+    @include tablet-and-mobile {
+        display: grid;
+        height: fit-content;
+        grid-template-columns: 47% 47%;
+        grid-template-rows: auto auto;
+        padding: $mobile-selection-card-padding;
+        column-gap: 6%;
+        row-gap: 20px;
+    }
+    &__text {
+        @include typographies(subtitle);
+        @include tablet-and-mobile {
+            grid-column: 1 / span 2;
+            text-align: center;
+        }
+    }
+    & > .pledge-input {
+        margin-left: auto;
+        @include tablet-and-mobile {
+            width: min(150px,100%);
+            margin-left: 0;
+            justify-self: center;
+        }
+    }
+    & > .button {
+        margin-left: 20px;
+        @include tablet-and-mobile {
+            width: min(150px,100%);
+            margin-left: 0;
+            justify-self: center;
+        }
+    }
+}

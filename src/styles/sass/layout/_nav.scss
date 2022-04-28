@@ -1,0 +1,28 @@
+
+.nav {
+    &__icon {
+        display: none;
+        width: 20px;
+        @include tablet-and-mobile {
+            display: initial;
+        }
+        &.close {
+            position: relative;
+            z-index: 30;
+            width: 15px;
+        }
+    }
+    &__list {
+        display: flex;
+        list-style: none;
+        gap: 2.5rem;
+        @include tablet-and-mobile {
+            display: none;
+        }
+    }
+    &__link {
+        cursor: pointer;
+        @include typographies(nav);
+        text-shadow: 0 0 2px $neutral-color-quaternary;
+    }
+}

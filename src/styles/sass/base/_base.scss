@@ -1,0 +1,27 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    box-sizing: border-box;
+    background: $neutral-color-secondary;
+    position: relative;
+    padding-bottom: 200px;
+    @include tablet-only {
+        font-size: 0.85em;
+    }
+    @include mobile-only {
+        font-size: 1em;
+    }
+    @include mobile-only-375 {
+        font-size: 0.93em;
+    }
+    @include mobile-only-320 {
+        font-size: 0.85em;
+    }
+}
+

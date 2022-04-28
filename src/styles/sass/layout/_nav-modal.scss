@@ -1,0 +1,54 @@
+.nav-modal {
+    visibility: hidden;
+    &.displayed {
+        visibility: visible;
+        & .nav-modal__window {
+            opacity: 1;
+            transition: opacity 0.3s 0.1s ease-out;
+        }
+    }
+    &__overlay {
+        z-index: 20;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        background-color: rgba(0,0,0);
+        opacity: 0.5;
+    }
+    &__window {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 21;
+        @include project-section('fit-content');
+        position: absolute;
+        opacity: 0;
+        left: calc(50% - $sections-width / 2);
+        top: 75px;
+        padding: 0;
+        @include tablet-and-mobile {
+            padding: 0;
+            left: 5%;
+            top: 75px;
+        }
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        width: 100%;
+    }
+    &__link {
+        cursor: pointer;
+        @include typographies(selection-card-title);
+        height: 75px;
+        display: flex;
+        align-items: center;
+        padding-left: 12%;
+        border-top: $section-border;
+        &--first {
+            border: none;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+$radio-btn-size: 30px;
+
+.radio-btn {
+    width: $radio-btn-size;
+    height: $radio-btn-size;
+    border: $section-border;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include tablet-and-mobile {
+        width: $radio-btn-size * 0.75;
+        height: $radio-btn-size * 0.75;
+    }
+    &__check {
+        width: 60%;
+        height: 60%;
+        border-radius: 50%;
+        background-color: transparent;
+    }
+}

@@ -1,0 +1,45 @@
+
+.project-header {
+    @include project-section(300px);
+    margin-top: -100px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include mobile-only {
+        height: 330px;
+    }
+    &__logo {
+        width: 60px;
+        height: 60px;
+        @include position-top-center(60px, 60px);
+    }
+    &__title {
+        text-align: center;
+        position: relative;
+        top: 10px;
+        @include typographies(header);
+        @include tablet-and-mobile {
+            top: 10px;
+        }
+    }
+    &__subtitle {
+        text-align: center;
+        position: relative;
+        top: -10px;
+        @include typographies(subtitle);
+        @include mobile-only {
+            top: 0;
+        }
+    }
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+        @include tablet-only {
+            gap: 10px;
+        }
+        @include mobile-only {
+            gap: 15px;
+        }
+    }
+}

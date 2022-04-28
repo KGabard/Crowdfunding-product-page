@@ -1,0 +1,22 @@
+
+$color-primary: rgb(21,122,116);
+$color-secondary: rgb(60,180,171);
+
+$neutral-color-primary: hsl(0, 0%, 100%);
+$neutral-color-secondary: rgb(240, 240, 240);
+$neutral-color-tertiary: rgb(121, 121, 121);
+$neutral-color-quaternary: hsl(0, 0%, 0%);
+
+$sections-width: 800px;
+$sections-padding: 55px 50px;
+$reward-card-padding: 45px 40px;
+$selection-card-padding: 35px 30px;
+
+$mobile-sections-width: 90%;
+$mobile-sections-padding: 40px 20px;
+$mobile-reward-card-padding: 20px 15px;
+$mobile-selection-card-padding: 20px 15px;
+
+
+
+$section-border: 2px solid darken($neutral-color-secondary,5%);
