@@ -13,7 +13,7 @@ function App() {
   const [isModalDisplay, setModalDisplay] = useState({
     selection: false,
     greetings: false,
-    nav: true
+    nav: false
   });
   const [activeCard, updateActiveCard] = useState([false, false, false, false]);
   const selectionModalElement = useRef();
