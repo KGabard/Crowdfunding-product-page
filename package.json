@@ -1,4 +1,5 @@
 {
+  "homepage": "/build",
   "name": "crowdfunding-product-page",
   "version": "0.1.0",
   "private": true,
