@@ -45,7 +45,7 @@ function SelectionModal({
                     activeCard={activeCard}
                     updateActiveCard={updateActiveCard}
                     optionNumber={2}
-                    rewardsLeft={projectData.bambooRwdLeft}
+                    rewardsLeft={projectData.rewardsLeft[0]}
                     projectData={projectData}
                     updateProjectData={updateProjectData}
                     isModalDisplay={isModalDisplay}
@@ -59,7 +59,7 @@ function SelectionModal({
                     activeCard={activeCard}
                     updateActiveCard={updateActiveCard}
                     optionNumber={3}
-                    rewardsLeft={projectData.blackRwdLeft}
+                    rewardsLeft={projectData.rewardsLeft[1]}
                     projectData={projectData}
                     updateProjectData={updateProjectData}
                     isModalDisplay={isModalDisplay}
@@ -73,7 +73,7 @@ function SelectionModal({
                     activeCard={activeCard}
                     updateActiveCard={updateActiveCard}
                     optionNumber={4}
-                    rewardsLeft={projectData.mahoganyRwdLeft}
+                    rewardsLeft={projectData.rewardsLeft[2]}
                     projectData={projectData}
                     updateProjectData={updateProjectData}
                     isModalDisplay={isModalDisplay}

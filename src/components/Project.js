@@ -22,6 +22,7 @@ function Project({
                 isModalDisplay={isModalDisplay} 
                 setModalDisplay={setModalDisplay}
                 selectionModalElement={selectionModalElement}
+                updateActiveCard={updateActiveCard}
             />
             <ProjectTracker
                 projectData={projectData}

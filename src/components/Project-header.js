@@ -7,7 +7,8 @@ function ProjectHeader({
     setIsBookmarked, 
     isModalDisplay, 
     setModalDisplay, 
-    selectionModalElement
+    selectionModalElement,
+    updateActiveCard
 }) {
 
     return (
@@ -17,6 +18,7 @@ function ProjectHeader({
             <p className="project-header__subtitle">A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
             <div className='project-header__buttons'>
                 <div className="button" onClick={() => {
+                    updateActiveCard([false,false,false,false]);
                     setModalDisplay({...isModalDisplay, selection: true});
                     selectionModalElement.current.scrollIntoView({ behavior: 'smooth', block: "start" });
                 }}>Back this project</div>

@@ -1,6 +1,7 @@
 
 .nav {
     &__icon {
+        cursor: pointer;
         display: none;
         width: 20px;
         @include tablet-and-mobile {

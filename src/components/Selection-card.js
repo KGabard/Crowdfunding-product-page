@@ -22,7 +22,10 @@ function SelectionCard({
     function addDonation(amount) {
         updateProjectData({ ...projectData,
           donations: projectData.donations + amount,
-          backersNumber: projectData.backersNumber + 1
+          backersNumber: projectData.backersNumber + 1,
+          rewardsLeft: projectData.rewardsLeft.map((item, index) => {
+              return Number(index) === (optionNumber - 2) ? projectData.rewardsLeft[index] - 1 : projectData.rewardsLeft[index];
+          })
         });
     }
 
@@ -62,7 +65,7 @@ function SelectionCard({
                 <p className="pledge-container__text">Enter your pledge</p>
                 <div className="pledge-input">
                     <p>$</p>
-                    <input className="pledge-input__value" value={pledgeValue} onChange={(e) => {
+                    <input className="pledge-input__value" type="number" value={pledgeValue} onChange={(e) => {
                         setPledge(e.target.value);
                     }}></input>
                 </div>

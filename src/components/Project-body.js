@@ -25,7 +25,7 @@ function ProjectBody({
                 title={"Bamboo Stand"}
                 subtitle={"Pledge $25 or more"}
                 text={"You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list."}
-                rewardsLeft={projectData.bambooRwdLeft}
+                rewardsLeft={projectData.rewardsLeft[0]}
                 activeCard={activeCard}
                 updateActiveCard={updateActiveCard}
                 optionNumber={2}
@@ -37,7 +37,7 @@ function ProjectBody({
                 title={"Black Edition Stand"}
                 subtitle={"Pledge $75 or more"}
                 text={"You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer member list. Shipping is included."}
-                rewardsLeft={projectData.blackRwdLeft}
+                rewardsLeft={projectData.rewardsLeft[1]}
                 activeCard={activeCard}
                 updateActiveCard={updateActiveCard}
                 optionNumber={3}
@@ -49,7 +49,7 @@ function ProjectBody({
                 title={"Mahogany Edition Stand"}
                 subtitle={"Pledge $200 or more"}
                 text={"You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added to our Backer member list. Shipping is included."}
-                rewardsLeft={projectData.mahoganyRwdLeft}
+                rewardsLeft={projectData.rewardsLeft[2]}
                 activeCard={activeCard}
                 updateActiveCard={updateActiveCard}
                 optionNumber={4}
